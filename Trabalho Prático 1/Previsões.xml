@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Rows>
+<Row><tMin>11.3</tMin> <tMax>17.3</tMax> <forecastDate>2020-11-07</forecastDate> <descWeatherType>Chuva fraca ou chuvisco</descWeatherType></Row>
+<Row><tMin>13.1</tMin> <tMax>17.4</tMax> <forecastDate>2020-11-08</forecastDate> <descWeatherType>Chuva</descWeatherType></Row>
+<Row><tMin>11.0</tMin> <tMax>16.7</tMax> <forecastDate>2020-11-09</forecastDate> <descWeatherType>Chuva</descWeatherType></Row>
+<Row><tMin>8.1</tMin> <tMax>18.2</tMax> <forecastDate>2020-11-10</forecastDate> <descWeatherType>Céu parcialmente nublado</descWeatherType></Row>
+<Row><tMin>8.1</tMin> <tMax>17.7</tMax> <forecastDate>2020-11-11</forecastDate> <descWeatherType>Céu nublado por nuvens altas</descWeatherType></Row>
+</Rows>
