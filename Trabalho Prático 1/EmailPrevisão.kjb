@@ -414,7 +414,7 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Transformation</name>
+      <name>Html como variável de ambiente</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
@@ -474,7 +474,7 @@
     </hop>
     <hop>
       <from>XSL transformation</from>
-      <to>Transformation</to>
+      <to>Html como variável de ambiente</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -482,7 +482,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Transformation</from>
+      <from>Html como variável de ambiente</from>
       <to>Mail</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
