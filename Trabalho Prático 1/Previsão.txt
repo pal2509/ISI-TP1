@@ -1,0 +1,6 @@
+tMin;tMax;forecastDate;descWeatherType
+7.1;19.0;2020-11-10;Céu nublado por nuvens altas
+7.4;19.0;2020-11-11;Céu parcialmente nublado
+8.6;21.2;2020-11-12;Céu nublado por nuvens altas
+8.9;19.0;2020-11-13;Aguaceiros fracos
+11.0;18.2;2020-11-14;Chuva
