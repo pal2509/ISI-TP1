@@ -304,7 +304,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>272</xloc>
+      <xloc>128</xloc>
       <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
@@ -315,7 +315,7 @@
       <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>C:/Users/Paulo/OneDrive/Documentos/Integração de Sistemas Informaticos/Trabalho Prático 1/Email com previsão.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/Email com previsão.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -343,7 +343,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>480</xloc>
+      <xloc>400</xloc>
       <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
@@ -395,9 +395,9 @@
       <description/>
       <type>XSLT</type>
       <attributes/>
-      <xmlfilename>C:\Users\Paulo\OneDrive\Documentos\Integração de Sistemas Informaticos\Trabalho Prático 1\Previsões.xml</xmlfilename>
-      <xslfilename>C:\Users\Paulo\OneDrive\Documentos\Integração de Sistemas Informaticos\Trabalho Prático 1\Previsão.xsl</xslfilename>
-      <outputfilename>C:\Users\Paulo\OneDrive\Documentos\Integração de Sistemas Informaticos\Trabalho Prático 1\Previsão.html</outputfilename>
+      <xmlfilename>${Internal.Entry.Current.Directory}\Previsões.xml</xmlfilename>
+      <xslfilename>${Internal.Entry.Current.Directory}\Previsão.xsl</xslfilename>
+      <outputfilename>${Internal.Entry.Current.Directory}\Previsão.html</outputfilename>
       <iffileexists>1</iffileexists>
       <addfiletoresult>N</addfiletoresult>
       <filenamesfromprevious>N</filenamesfromprevious>
@@ -409,7 +409,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>656</xloc>
+      <xloc>640</xloc>
       <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
@@ -452,25 +452,61 @@
       <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
+    <entry>
+      <name>Delete Previsões.html</name>
+      <description/>
+      <type>DELETE_FILE</type>
+      <attributes/>
+      <filename>${Internal.Entry.Current.Directory}\Previsão.html</filename>
+      <fail_if_file_not_exists>N</fail_if_file_not_exists>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>288</xloc>
+      <yloc>192</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Previsões.xml existe</name>
+      <description/>
+      <type>FILE_EXISTS</type>
+      <attributes/>
+      <filename>${Internal.Entry.Current.Directory}/Previsões.xml</filename>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>512</xloc>
+      <yloc>192</yloc>
+      <attributes_kjc/>
+    </entry>
   </entries>
   <hops>
     <hop>
-      <from>Start</from>
-      <to>Previsões XML</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Previsões XML</from>
-      <to>XSL transformation</to>
+      <from>Html como variável de ambiente</from>
+      <to>Mail</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Delete Previsões.html</from>
+      <to>Previsões XML</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Start</from>
+      <to>Delete Previsões.html</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
     <hop>
       <from>XSL transformation</from>
@@ -482,8 +518,17 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Html como variável de ambiente</from>
-      <to>Mail</to>
+      <from>Previsões.xml existe</from>
+      <to>XSL transformation</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Previsões XML</from>
+      <to>Previsões.xml existe</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
