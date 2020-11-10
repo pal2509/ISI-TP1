@@ -553,7 +553,7 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\Paulo\OneDrive\Documentos\Integração de Sistemas Informaticos\Trabalho Prático 1\Previsão.xls</name>
+      <name>${Internal.Entry.Current.Directory}\Previsão.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
